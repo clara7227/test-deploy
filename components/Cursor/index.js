@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CustomCursor from "custom-cursor-react";
-import "custom-cursor-react/dist/index.css";
 import { useTheme } from "next-themes";
 
 const Cursor = () => {
@@ -20,10 +18,10 @@ const Cursor = () => {
   }, []);
   return (
     <>
-      {mount && (
-        <CustomCursor
+       {mount && (
+        <div
           targets={[".link"]}
-          customClass="custom-cursor"
+          // customClass="custom-cursor"
           dimensions={30}
           fill={getCusomColor()}
           smoothness={{
@@ -34,7 +32,7 @@ const Cursor = () => {
           targetOpacity={0.5}
           targetScale={2}
         />
-      )}
+      )} 
     </>
   );
 };
